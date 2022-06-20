@@ -1,0 +1,267 @@
+.container {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+#content {
+   float: left;
+   width: 75%;
+}
+
+body {
+   font-family: 'Quicksand', sans-serif;
+   margin: 0;
+   padding: 0;
+   overflow-x: hidden;
+}
+
+main {
+   padding: 20px;
+   overflow: auto;
+}
+
+h2 {
+   color: black;
+}
+
+h3 {
+   color: #00a2c6;
+}
+
+nav ul {
+   display: flex;
+   list-style-type: none;
+   width: 40%;
+   justify-content: space-between;
+}
+
+nav a:hover {
+   font-weight: bold;
+}
+
+footer {
+   padding: 20px;
+   color: rgb(255, 255, 255);
+   background-image: url('../img/banner.jpg');
+   background-size: cover;
+   text-align: center;
+   position: relative;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+}
+
+nav {
+   display: flex;
+   background-color: #00a2c6;
+   justify-content: space-around;
+   height: 50px;
+   align-items: center;
+   color: #00a2c6;
+
+
+}
+
+#AISH {
+   font-family: 'PT Serif', serif;
+   color: #00a2c6;
+}
+
+#right-nav {
+   position: absolute;
+   right: 0;
+}
+
+nav li {
+   display: inline;
+   list-style-type: none;
+   margin-right: 50px;
+   font-size: 45px;
+
+}
+
+nav a {
+   font-size: 18px;
+   font-weight: 400;
+   text-decoration: none;
+   color: rgb(0, 0, 0);
+}
+
+
+/* Menerapkan Jumbotron */
+.jumbotron {
+   font-size: 20px;
+   padding: 10px;
+   background-image: url('../img/banner.jpg');
+   background-size: cover;
+   text-align: center;
+   color: rgb(255, 255, 255);
+}
+
+
+/*Paragraph*/
+.justify-text {
+
+   text-align: justify;
+}
+
+.culture {
+   font-size: 20px;
+   padding: 60px;
+   background-color: #c772e1;
+   text-align: center;
+   color: white;
+}
+
+#sejarah {
+   font-size: 30px;
+}
+
+#budaya {
+   font-size: 30px;
+}
+
+#agama {
+   font-size: 30px;
+   ;
+}
+
+.religion {
+   font-size: 20px;
+   padding: 60px;
+   background-color: #c772e1;
+   text-align: center;
+   color: white;
+}
+
+.profile header {
+   text-align: center;
+}
+
+#profile {
+   font-weight: bold;
+   font-size: 20px;
+}
+
+.article-par {
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 20px;
+}
+
+
+
+.featured-image {
+   width: 100%;
+   max-height: 300px;
+   object-fit: cover;
+   object-position: center;
+}
+
+.card {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   border-radius: 5px;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+
+/* Hamburger menu*/
+.menu-toggle {
+   display: none;
+   flex-direction: column;
+   height: 20px;
+   justify-content: space-between;
+   position: relative;
+
+}
+
+.menu-toggle input {
+   position: absolute;
+   width: 40px;
+   height: 28px;
+   opacity: 0;
+   left: -5px;
+   top: -3px;
+   cursor: pointer;
+}
+
+.menu-toggle span {
+   display: block;
+   width: 30px;
+   height: 3px;
+   background-color: rgb(0, 0, 0);
+   border-radius: 3px;
+   transition: all 0.5s;
+}
+
+/* Hamburger Menu Animation */
+.menu-toggle span:nth-child(2) {
+   transform-origin: 0 0;
+
+}
+
+.menu-toggle span:last-child {
+   transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked~span:nth-child(2) {
+   background-color: white;
+   transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked~span:last-child {
+   background-color: white;
+   transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+   opacity: 0;
+   transform: scale(0);
+}
+
+aside {
+   float: right;
+   width: 25%;
+   padding-left: 20px;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+/* Rule yang dituliskan dalam block @media di bawah akan diterapkan pada device yang memiliki ukuran viewport di bawah 992px */
+@media screen and (max-width: 768px) {
+
+   #content,
+   aside {
+      width: 100%;
+      padding: 0;
+   }
+
+}
+
+/* Rule yang dituliskan dalam block @media di bawah akan diterapkan pada device yang memiliki ukuran viewport di bawah 600px */
+@media screen and (max-width: 576px) {
+
+   .menu-toggle {
+      display: flex;
+   }
+
+   /* ..... */
+   nav ul li {
+      display: none;
+   }
+
+   /* Menampilkan isi menu saat menu disembunyikan pada saat di klik */
+
+
+   nav ul.slide {
+      transform: translateX(0);
+   }
+
+
+}
